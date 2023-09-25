@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "384305517086",
+    "project_id": "dashboard-e8ce7",
+    "storage_bucket": "dashboard-e8ce7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384305517086:android:2094c6ed4a59482b1f140f",
+        "android_client_info": {
+          "package_name": "com.dareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384305517086-3cuipkeh7ndgmiotiml19o4rstahsscs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4S9i9DunoAxaApdftDmQ37kwjeYfRI08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384305517086-3cuipkeh7ndgmiotiml19o4rstahsscs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
