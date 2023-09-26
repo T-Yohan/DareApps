@@ -6,6 +6,7 @@ import ItemPlayer from '../component/player/ItemPlayer';
 import EmptyPlayer from '../component/player/EmptyPlayer';
 import AddPlayer from '../component/player/AddPlayer';
 import ResetPlayer from '../component/player/ResetPlayer';
+import StartGame from '../component/buttonGame/StartGame';
 const Players = () => {
   const {players} = useSelector(state=>state.player);//recupération de la liste des users dans le store
 
@@ -18,6 +19,7 @@ const Players = () => {
   ListEmptyComponent={EmptyPlayer}//composant de liste vide
   ListHeaderComponent={AddPlayer}//composant pour ajouter des joueurs
   />
+  <StartGame/>
   <ResetPlayer/>
     </View>
   )

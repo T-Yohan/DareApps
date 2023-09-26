@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { useDispatch } from "react-redux";
 
 const initState = {
-                players:[],
+                players:[
+                    {id:1,name:'Yohan'},
+                    {id:2,name:'Hervé'},
+                    {id:3,name:'Ludmilla'},
+                    {id:4,name:'Yannick'},
+                    {id:5,name:'Betsy'},
+            ],
                 position : 0,
 }
 
@@ -30,8 +37,15 @@ export const player = createSlice({
             console.log('vider');
             return initState ;
         },
+        nextPlayer:(state,action)=>{
+            const newState = {...state,position:action.payload}
+
+            // console.log('action.payload',action.payload);
+            return newState;
+        },
     }
+
 })
 
-export const {addPlayer,delPlayer,resetPlayer} = player.actions;
+export const {addPlayer,delPlayer,resetPlayer,nextPlayer} = player.actions;
 export default player.reducer;
