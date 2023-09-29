@@ -7,7 +7,7 @@ const ItemCategory = ({category}) => {
     return(
     <List.Item
     title={category.name}
-    onPress={()=>navigation.navigate('TruthOrDare',{id: category.name})}
+    onPress={()=>navigation.navigate('TruthOrDare',{id: category.id})}
     />
 )};
 

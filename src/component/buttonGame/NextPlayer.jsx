@@ -8,16 +8,16 @@ import { useNavigation } from '@react-navigation/native';
 const NextPlayer = ({id}) => {
 
   const dispatch = useDispatch();
-
   const navigation = useNavigation();
   const {players,position} = useSelector(state=>state.player);
+  //fonction permettant de passer au joueur suivant
   const suivant = () => { 
     if(players.length== position +1){
       dispatch(nextPlayer(0));
     }else{
       dispatch(nextPlayer(position + 1));
     }
-      navigation.navigate('TruthOrDare',{id:id});
+    navigation.navigate('TruthOrDare',{id:id})
   }
   return (
     <View>
