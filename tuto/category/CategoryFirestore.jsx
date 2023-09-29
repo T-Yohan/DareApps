@@ -1,13 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Tuto from './tuto/Tuto'
 
-const App = () => {
+const CategoryFirestore = () => {
   return (
     <View>
-      <Tuto/>
+      <Text>CategoryFirestore</Text>
     </View>
   )
 }
 
-export default App
+export default CategoryFirestore
