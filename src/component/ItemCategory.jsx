@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import * as React from 'react';
-import {List, Text} from 'react-native-paper';
+import {Button, List, Text} from 'react-native-paper';
 import styles from '../../styles';
 import { Image, View } from 'react-native';
 
@@ -12,7 +12,7 @@ const ItemCategory = ({category}) => {
 //     onPress={()=>navigation.navigate('TruthOrDare',{id: category.id})}
 //     />
 // )
-console.log(category)
+
 return (
     <View style={[
         styles.slide,
@@ -21,8 +21,11 @@ return (
         }
         ]}>
         <Text style={styles.slideTitle}>{category.name}</Text>
-        {/* <Image source={{uri: category.image}} /> */}
         <Text style={styles.slideText}>{category.description}</Text>
+        <Image source={{uri: category.image}} />
+        <Button icon="play" mode="contained" onPress={() => navigation.navigate('TruthOrDare',{id:category.id})}>
+        Choisir
+        </Button>
     </View>
 );
 };

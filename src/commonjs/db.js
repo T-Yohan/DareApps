@@ -34,12 +34,13 @@ export const loadData = async (collectionName) => {
  * params(id<string> : id category)
 */
 
-export const loadDataDareOrTruth = async (id)=>{
+export const loadDataDareOrTruth = async (id,type)=>{
     console.log('loadDataDareOrTruth',id);
 
         const snapShot = await firestore()
-                            .collection("DareOrTruth")
+                            .collection("TruthOrDare")
                             .where('category','==',id)
+                            .where('type','==',type)
                             .get();
     
     
