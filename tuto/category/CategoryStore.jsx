@@ -1,10 +1,24 @@
-import { View, Text } from 'react-native'
+import { View, Text,FlatList} from 'react-native'
 import React from 'react'
+import styles from './styles'
+import { useSelector } from 'react-redux'
+import CategoryItem from './component/CategoryItem'
+
 
 const CategoryStore = () => {
+const categories = useSelector(state=>state.category);
+console.log("categories",categories)
+
+
   return (
-    <View>
-      <Text>CategoryStore</Text>
+    <View style={styles.container}>
+      <Text style={styles.titleCategoryStore}>Category Store</Text>
+      <FlatList
+      data = {categories}
+      renderItem = {({item})=><CategoryItem category={item}/>}
+      keyExtractor = {item=>item.id}
+      horizontal = {true}
+      />
     </View>
   )
 }
