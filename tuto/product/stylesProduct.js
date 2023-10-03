@@ -5,7 +5,7 @@ export const stylesProduct = StyleSheet.create({
         paddingHorizontal: 10,
     },
     CardContent:{
-        backgroundColor:"lightgreen",
+        backgroundColor:"white",
         borderRadius:10,
         width:(width-(10*2)-(5*4))/2,
     },
@@ -21,5 +21,9 @@ export const stylesProduct = StyleSheet.create({
         fontSize:14,
         color:"green",
         fontWeight:"300"
-    }
+    },
+    contentButtonFilter : {
+        // backgroundColor : "red",
+        flexDirection : "row",
+    },
 })

@@ -1,16 +1,15 @@
 import { View, Text,FlatList } from 'react-native'
 import React from 'react'
-import { products } from '../data'
+import { dataProducts } from '../data'
 import CardProduct from './component/CardProduct';
 import styles from '../category/styles';
 import { stylesProduct } from './stylesProduct';
 const ProductData = () => {
-console.log('products',products);
 
     return (
     <View style={stylesProduct.container}>
     <FlatList
-    data = {products}
+    data = {dataProducts}
     renderItem={({item})=><CardProduct product={item}/>}
     keyExtractor={item=>item.id}
     numColumns={2}
