@@ -11,8 +11,9 @@ const send = (value) => {
     console.log(value);
     //formatage de la donnée à ajouter dans le store
     const newPlayer = {
-        id : Date.now(),
+        id   : Date.now(),
         name : value,
+        tod  :[],
     }
     dispatch(addPlayer(newPlayer))
     setName('')//vide mon text input

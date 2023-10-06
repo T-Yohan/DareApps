@@ -3,11 +3,11 @@ import { useDispatch } from "react-redux";
 
 const initState = {
                 players:[
-                    {id:1,name:'Yohan'},
-                    {id:2,name:'Hervé'},
-                    {id:3,name:'Ludmilla'},
-                    {id:4,name:'Yannick'},
-                    {id:5,name:'Betsy'},
+                    {id:1,name:'Yohan',tod:[]},
+                    {id:2,name:'Hervé',tod:[]},
+                    {id:3,name:'Ludmilla',tod:[]},
+                    {id:4,name:'Yannick',tod:[]},
+                    {id:5,name:'Betsy',tod:[]},
             ],
                 position : 0,
 }
@@ -34,18 +34,24 @@ export const player = createSlice({
             return newState;
         },
         resetPlayer:(state,action)=>{//vide la liste des joueurs
-            console.log('vider');
+            // console.log('vider');
             return initState ;
         },
         nextPlayer:(state,action)=>{
             const newState = {...state,position:action.payload}
-
             // console.log('action.payload',action.payload);
             return newState;
+        },
+        updateTod : (state,action) => {
+            // console.log("prev state",state);
+            console.log("action.payload",action.payload);
+
+            state.players[state.position].tod.push(action.payload);
+            console.log("nextState",state);
         },
     }
 
 })
 
-export const {addPlayer,delPlayer,resetPlayer,nextPlayer} = player.actions;
+export const {addPlayer,delPlayer,resetPlayer,nextPlayer , updateTod} = player.actions;
 export default player.reducer;

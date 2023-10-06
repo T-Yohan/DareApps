@@ -22,7 +22,7 @@ return (
         ]}>
         <Text style={styles.slideTitle}>{category.name}</Text>
         <Text style={styles.slideText}>{category.description}</Text>
-        <Image source={{uri: category.image}} />
+        {/* <Image source={{uri: category.image}} /> */}
         <Button icon="play" mode="contained" onPress={() => navigation.navigate('TruthOrDare',{id:category.id})}>
         Choisir
         </Button>
