@@ -41,7 +41,7 @@ export const loadDataDareOrTruth = async (id,type)=>{
                             .collection("TruthOrDare")
                             .where('category','==',id)
                             .where('type','==',type)
-                            
+                            .where(firestore.FieldPath.documentId(),'not-in',tod["a"])
                             .get();
     
     
@@ -55,7 +55,7 @@ export const loadDataDareOrTruth = async (id,type)=>{
             })
     
     
-            return datas;
+            return datas.filter(item => item.category == id).filter(item =>item.type == type);
         } else {
             return [];
         }
